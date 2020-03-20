@@ -5,16 +5,16 @@ namespace net\authorize\util;
 
 class SensitiveDataConfigType
 {
-	/**
+    /**
      * @Type("array<net\authorize\util\SensitiveTag>")
-	 * @SerializedName("sensitiveTags")
+     * @SerializedName("sensitiveTags")
      */
-	public $sensitiveTags;
-	
-	/**
+    public $sensitiveTags;
+    
+    /**
      * @Type("array<string>")
-	 * @SerializedName("sensitiveStringRegexes")
+     * @SerializedName("sensitiveStringRegexes")
      */
-	public $sensitiveStringRegexes;
+    public $sensitiveStringRegexes;
 }
 ?>

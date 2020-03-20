@@ -9,27 +9,27 @@ $serializedName=new SerializedName(array("value"=>"Loading-SerializedName-Class"
 
 class SensitiveTag
 {
-	/**
+    /**
      * @Type("string")
-	 * @SerializedName("tagName")
+     * @SerializedName("tagName")
      */
     public $tagName;
-	
-	/**
+    
+    /**
      * @Type("string")
-	 * @SerializedName("pattern")
+     * @SerializedName("pattern")
      */
     public $pattern;
-	
-	/**
+    
+    /**
      * @Type("string")
-	 * @SerializedName("replacement")
+     * @SerializedName("replacement")
      */
     public $replacement;
-	
-	/**
+    
+    /**
      * @Type("boolean")
-	 * @SerializedName("disableMask")
+     * @SerializedName("disableMask")
      */
     public $disableMask;
 

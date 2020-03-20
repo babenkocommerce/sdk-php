@@ -62,8 +62,9 @@ class ARBUpdateSubscriptionRequest extends ANetApiRequestType
         return $this;
     }
 
-
-    // Json Serialize Code
+    /**
+     * @return array|mixed
+     */
     public function jsonSerialize(){
         $values = array_filter((array)get_object_vars($this),
         function ($val){

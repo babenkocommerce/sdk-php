@@ -3,15 +3,15 @@ namespace net\authorize\util;
 
 class MapperObj{
 
-	public $isCustomDefined = false;
+    public $isCustomDefined = false;
 
-	public $className = null;
+    public $className = null;
 
-	public $isArray = false;
+    public $isArray = false;
 
-	public $isInlineArray = false;
+    public $isInlineArray = false;
 
-	public $arrayEntryname = null;
+    public $arrayEntryname = null;
 }
 //echo $classes['net\authorize\api\contract\v1\ANetApiRequestType']['properties']['merchantAuthentication']['type']."\n";
 
