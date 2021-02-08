@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing MerchantContactType
  *
- * 
+ *
  * XSD Type: merchantContactType
  */
 class MerchantContactType implements \JsonSerializable
@@ -176,7 +176,7 @@ class MerchantContactType implements \JsonSerializable
 
     /**
      * Json Serialize Code
-     * 
+     *
      * @return array|mixed
      */
     public function jsonSerialize(){
@@ -205,17 +205,12 @@ class MerchantContactType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
-    } 
+        return $values;
+    }
 
     /**
      * Json Set Code
-     * 
+     *
      * @param $data
      * @throws \Exception
      *
@@ -227,7 +222,7 @@ class MerchantContactType implements \JsonSerializable
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
 				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -267,6 +262,6 @@ class MerchantContactType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

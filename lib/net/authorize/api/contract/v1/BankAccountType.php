@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing BankAccountType
  *
- * 
+ *
  * XSD Type: bankAccountType
  */
 class BankAccountType implements \JsonSerializable
@@ -203,7 +203,7 @@ class BankAccountType implements \JsonSerializable
 
     /**
      * Json Serialize Code
-     * 
+     *
      * @return array|mixed
      */
     public function jsonSerialize(){
@@ -232,17 +232,12 @@ class BankAccountType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
-    } 
+        return $values;
+    }
 
     /**
      * Json Set Code
-     * 
+     *
      * @param $data
      * @throws \Exception
      *
@@ -254,7 +249,7 @@ class BankAccountType implements \JsonSerializable
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
 				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -294,6 +289,6 @@ class BankAccountType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

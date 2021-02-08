@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing ARBGetSubscriptionListSortingType
  *
- * 
+ *
  * XSD Type: ARBGetSubscriptionListSorting
  */
 class ARBGetSubscriptionListSortingType implements \JsonSerializable
@@ -97,12 +97,7 @@ class ARBGetSubscriptionListSortingType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
+        return $values;
     }
 
     /**
@@ -119,7 +114,7 @@ class ARBGetSubscriptionListSortingType implements \JsonSerializable
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
 				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -159,6 +154,6 @@ class ARBGetSubscriptionListSortingType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

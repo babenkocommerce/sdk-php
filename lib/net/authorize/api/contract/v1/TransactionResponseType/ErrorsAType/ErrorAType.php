@@ -65,7 +65,7 @@ class ErrorAType implements \JsonSerializable
 
     /**
      * Json Serialize Code
-     * 
+     *
      * @return array|mixed
      */
     public function jsonSerialize(){
@@ -94,17 +94,12 @@ class ErrorAType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
-    } 
+        return $values;
+    }
 
     /**
      * Json Set Code
-     * 
+     *
      * @param $data
      * @throws \Exception
      *
@@ -116,7 +111,7 @@ class ErrorAType implements \JsonSerializable
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
 				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -156,6 +151,6 @@ class ErrorAType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 
