@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing TransactionResponseType
  *
- * 
+ *
  * XSD Type: transactionResponse
  */
 class TransactionResponseType implements \JsonSerializable
@@ -857,7 +857,7 @@ class TransactionResponseType implements \JsonSerializable
 
     /**
      * Json Serialize Code
-     * 
+     *
      * @return array|mixed
      */
     public function jsonSerialize(){
@@ -886,17 +886,12 @@ class TransactionResponseType implements \JsonSerializable
                 }
             }
         }
-        if (get_parent_class() == ""){
-            return $values;
-        }
-        else{
-            return array_merge(parent::jsonSerialize(), $values);
-        }
-    } 
+        return $values;
+    }
 
     /**
      * Json Set Code
-     * 
+     *
      * @param $data
      * @throws \Exception
      *
@@ -908,7 +903,7 @@ class TransactionResponseType implements \JsonSerializable
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
 				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -948,6 +943,6 @@ class TransactionResponseType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 
